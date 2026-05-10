@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Learn Math with DTH</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ICON -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- MATHJAX -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ================= CHỌN KHÓA ================= -->
+  <div id="coursePage" class="page active">
+
+    <div class="center-box">
+
+      <h1>Learn Math with DTH</h1>
+
+      <div class="course-grid">
+
+        <div class="course-grid">
+
+  <div class="course-card" onclick="selectCourse('Toán 10')">
+    <div class="course-icon">📘</div>
+    <h2>Toán 10</h2>
+    <div class="course-badge">9 chương</div>
+  </div>
+
+  <div class="course-card" onclick="selectCourse('Toán 11')">
+    <div class="course-icon">📗</div>
+    <h2>Toán 11</h2>
+    <div class="course-badge">9 chương</div>
+  </div>
+
+  <div class="course-card" onclick="selectCourse('Toán 12')">
+    <div class="course-icon">📕</div>
+    <h2>Toán 12</h2>
+    <div class="course-badge">6 chương</div>
+  </div>
+
+</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ================= LOGIN ================= -->
+  <div id="loginPage" class="page">
+
+  <div class="login-card">
+
+    <div class="login-logo">
+      📘
+    </div>
+
+    <h1>Đăng nhập</h1>
+
+    <p class="login-subtitle">
+      Hệ thống học tập trực tuyến
+    </p>
+
+    <p id="error"></p>
+
+    <input
+      id="username"
+      placeholder="Tên đăng nhập"
+    >
+
+  <div class="password-box">
+  <input type="password" id="password" placeholder="Mật khẩu">
+
+  <span onclick="togglePassword()" class="eye-btn">
+    👁
+  </span>
+</div>
+
+    <button onclick="login()">
+      Đăng nhập
+    </button>
+
+  </div>
+
+</div>
+
+  <!-- ================= STUDENT ================= -->
+  <div id="studentPage" class="page">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+      <div class="left">
+
+        <span class="menu-btn" onclick="toggleMenu()">
+          ☰
+        </span>
+
+        <span class="logo" onclick="logout()">
+          Learn Math with DTH
+        </span>
+
+      </div>
+
+      <div class="right" id="studentName"></div>
+
+    </div>
+
+    <!-- NỘI DUNG -->
+    <div class="layout">
+
+      <!-- MENU -->
+      <div id="studentMenu" class="sidebar"></div>
+
+      <!-- MAIN -->
+      <div class="main">
+
+        <!-- TÊN KHÓA HỌC -->
+        <h2 id="studentCourseTitle"></h2>
+
+        <!-- NỘI DUNG -->
+        <div id="studentMain"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ================= TEACHER ================= -->
+  <div id="teacherPage" class="page">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+      <div class="left">
+
+        <span class="menu-btn" onclick="toggleMenu()">
+  ☰
+</span>
+
+        <span class="logo" onclick="logout()">
+          Learn Math with DTH
+        </span>
+
+      </div>
+
+      <div class="right" id="teacherName"></div>
+
+    </div>
+
+    <!-- LAYOUT -->
+    <div class="layout">
+
+      <!-- MENU -->
+      <div id="teacherMenu" class="sidebar"></div>
+
+     <!-- MAIN -->
+<!-- MAIN -->
+<div id="teacherMain" class="main">
+  <h2 id="teacherCourseTitle"></h2>
+</div>
+
+ 
+
+
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+<!-- FIREBASE -->
+
+<script type="module" src="script.js"></script>
+
+
+
+
+
+</body>
+
+</html>
